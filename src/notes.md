@@ -25,7 +25,12 @@ As a user, I can:
 - [x] Callback will flip the value of watched for the detailed movieobj
 
 5. Enter a number of drops for each movie and have it persist in the DOM
-
+- [] Select the form
+- [] Add an event listener to the form
+- [] preventDefault()
+- [] get input value from form
+- [] Increment the `blood_amount` for detail movie with input value
+- [] Update the DOM
 
 MANTRA
 1. Get dataq

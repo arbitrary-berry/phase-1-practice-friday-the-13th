@@ -14,6 +14,7 @@ const description = document.querySelector('#description')
 const detailImage = document.querySelector('#detail-image')
 const yearReleased = document.querySelector('#year-released')
 const watched = document.querySelector('#watched')
+const amount = document.querySelector('#amount')
 
 
 function rednerInNav(movieObj){
@@ -31,6 +32,7 @@ function renderDetail(movieObj){
     let watchVal = movie.Obj.watched ? "Watched": "Unwatched"
     watched.textContent = watchVal
     yearReleased.textContent = movieObj.release-year
+    amount.textContent = movieObj.blood_amount
 }
 
 //Event listeners and handlers
@@ -46,7 +48,15 @@ function toggleWatched() {
     }
 }
 
+document.querySelector('blood-form').addEventListener('submit', handleBloodSubmit)
 
+function handleBloodSubmit(e){
+    e.preventDefault()
+    console.log(e.target["blood-amount"].value)
+    const newBlood = parseInt(e.target["blood-amount"].value),
+    selectedMovie.blood_amount += newBlood
+    renderDetail(selectedMovie)
+}
 //Initializers
 getAllMovies('http://localhost:3000/movies')
 .then(movieArr => {
