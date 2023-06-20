@@ -15,8 +15,8 @@ const yearReleased = document.querySelector('#year-released')
 
 function rednerInNav(movieObj){
     const img = document.createElement('img')
-    console.log(renderInNav)
     img.src = movieObj.image
+    img.addEventListener('click', () => renderDetail(movieObj))
     nav.appendChild(img)
 }
 
@@ -34,7 +34,8 @@ function renderDetail(movieObj){
 getAllMovies('http://localhost:3000/movies')
 .then(movieArr => {
     console.log(movieArr)
-    movieArr.forEach(renderInNav)
+    // movie.forEach(movie => renderInNav(movie))
+    movieArr.forEach(renderInNav) //short hand for above
     renderDetail(movieArr[0])
 })
 

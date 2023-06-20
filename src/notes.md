@@ -16,7 +16,12 @@ As a user, I can:
 
 
 3. Click a movie in the nav and see its details in the deatil section
+- [x] Add event listeners to each <img> in nav
+- [x] Use renderDetail fn from above
+
 4. Click a "watched" button which toggles; it persists only in the DOM
+
+
 5. Enter a number of drops for each movie and have it persist in the DOM
 
 
