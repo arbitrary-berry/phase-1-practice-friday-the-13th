@@ -1,3 +1,5 @@
+//Globals
+let selectedMovie;
 //Fetches
 
 function getAllMovies(url){
@@ -11,6 +13,7 @@ const title = document.querySelector('#title')
 const description = document.querySelector('#description')
 const detailImage = document.querySelector('#detail-image')
 const yearReleased = document.querySelector('#year-released')
+const watched = document.querySelector('#watched')
 
 
 function rednerInNav(movieObj){
@@ -21,13 +24,27 @@ function rednerInNav(movieObj){
 }
 
 function renderDetail(movieObj){
+    selectedMovie = movieObj
     title.textContent = movieObj.title
     description.textContent = movieObj.description
     detailImage.src = movieObj.image
+    let watchVal = movie.Obj.watched ? "Watched": "Unwatched"
+    watched.textContent = watchVal
     yearReleased.textContent = movieObj.release-year
 }
 
+//Event listeners and handlers
 
+watched.addEventListener('click', toggleWatched);
+
+function toggleWatched() {
+    selectedMovie.watched = !selectedMovie.watched
+    if (selectedMovie.watched) {
+        watched.textContent = "Watched"
+    } else {
+        watched.textContent = "Unwatched"
+    }
+}
 
 
 //Initializers

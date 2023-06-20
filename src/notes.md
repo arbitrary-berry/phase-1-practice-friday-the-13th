@@ -16,11 +16,13 @@ As a user, I can:
 
 
 3. Click a movie in the nav and see its details in the deatil section
-- [x] Add event listeners to each <img> in nav
+- [x] Add event listeners to e ach <img> in nav
 - [x] Use renderDetail fn from above
 
 4. Click a "watched" button which toggles; it persists only in the DOM
-
+- [x] Add event listener to the button
+- [x] Callback needs a conditional that sets the button text
+- [x] Callback will flip the value of watched for the detailed movieobj
 
 5. Enter a number of drops for each movie and have it persist in the DOM
 
