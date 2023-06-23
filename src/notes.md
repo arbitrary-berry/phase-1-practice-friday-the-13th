@@ -25,12 +25,12 @@ As a user, I can:
 - [x] Callback will flip the value of watched for the detailed movieobj
 
 5. Enter a number of drops for each movie and have it persist in the DOM
-- [] Select the form
-- [] Add an event listener to the form
-- [] preventDefault()
-- [] get input value from form
-- [] Increment the `blood_amount` for detail movie with input value
-- [] Update the DOM
+- [x] Select the form
+- [x] Add an event listener to the form
+- [x] preventDefault()
+- [x] get input value from form
+- [x] Increment the `blood_amount` for detail movie with input value
+- [x] Update the DOM
 
 MANTRA
 1. Get dataq
@@ -38,6 +38,8 @@ MANTRA
 3. Add datato new elements
 4. Select anchor element from DOM
 5. Append new elements
+
+Listen for submit event on the form
 
 ##Data shape
 ```json
@@ -153,3 +155,37 @@ MANTRA
         }
     ]
 }
+
+#Deliverables
+As a user, I can:
+1. view all movies in the nav element on page load
+- a. [] Fetch all movie data
+- b. [] Iterate over array of movies
+- c. [] Create <img> for each movie
+- d. [] Add a src to each <img> from each movieObj
+- e. [] Select nav element as anchor point
+- f. [] Append each <img> to anchor
+
+2. View the 1st movie details on page load
+- a. [] Fetch data for 1st movie? (if necessary)
+- b. [] Select proper DOM elements
+- c. [] Set attributes of DOM elements with selected movie obj properties
+- d. [] Call render function and send 1st movie obj
+
+
+3. Click a movie in the nav and see its details in the deatil section
+- a. [] Add event listeners to each <img> in nav
+- b. [] Use renderDetail fn from above
+
+4. Click a "watched" button which toggles; it persists only in the DOM
+- a. [] Add event listener to the button
+- b. [] Callback needs a conditional that sets the button text
+- c. [] Callback will flip the value of watched for the detailed movieobj
+
+5. Enter a number of drops for each movie and have it persist in the DOM
+- a. [] Select the form
+- b. [] Add an event listener to the form
+- c. [] preventDefault()
+- d. [] get input value from form
+- e. [] Increment the `blood_amount` for detail movie with input value
+- f. [] Update the DOM
